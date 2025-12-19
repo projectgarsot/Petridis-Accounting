@@ -105,7 +105,7 @@ export default function App() {
                     
                     {/* Statue Image - ATHENA */}
                     <img 
-                      src="/images/athena.png"
+                      src="images/athena.png"
                       alt="Statue of Athena"
                       className="w-full h-full object-cover object-top opacity-100 scale-105"
                     />
