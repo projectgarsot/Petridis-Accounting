@@ -71,12 +71,20 @@ export const WebDesignSection: React.FC = () => {
 
       {/* 3. Portfolio Showcase Title */}
       <div className="max-w-7xl mx-auto px-6 mb-12">
-         <h5 className="font-mono text-[10px] tracking-[0.4em] text-white/30 uppercase border-b border-white/5 pb-4">
-           SELECTED PROJECTS
-         </h5>
+         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/5 pb-6">
+            <div>
+                <h5 className="font-mono text-[10px] tracking-[0.4em] text-gold uppercase mb-2">
+                    ΕΡΓΑ ΓΙΑ ΤΟΥΣ ΠΕΛΑΤΕΣ ΜΑΣ
+                </h5>
+                <h3 className="font-serif text-3xl text-marble">Επιλεγμένα Projects</h3>
+            </div>
+            <p className="font-sans text-sm text-marble/40 max-w-sm">
+                Σχεδιάζουμε ψηφιακές πλατφόρμες που αναδεικνύουν την ποιότητα των τοπικών επιχειρήσεων.
+            </p>
+         </div>
       </div>
 
-      {/* 4. Horizontal Scrolling Gallery - Cards always in color */}
+      {/* 4. Horizontal Scrolling Gallery */}
       <div className="relative w-full overflow-hidden">
         <div className="flex gap-6 px-6 overflow-x-auto pb-16 no-scrollbar snap-x snap-mandatory">
           {DATA.digital.projects.map((project, i) => (
@@ -90,7 +98,7 @@ export const WebDesignSection: React.FC = () => {
               transition={{ delay: i * 0.1, duration: 0.8 }}
               className="min-w-[300px] md:min-w-[400px] aspect-[4/5] relative rounded-lg overflow-hidden group snap-center"
             >
-              {/* Image without grayscale */}
+              {/* Image always in color */}
               <img 
                 src={project.image} 
                 alt={project.title}
@@ -109,7 +117,7 @@ export const WebDesignSection: React.FC = () => {
                 </h3>
                 
                 <div className="flex items-center gap-2 text-white/50 group-hover:text-gold transition-colors">
-                  <span className="text-[10px] uppercase tracking-widest font-bold">VIEW PROJECT</span>
+                  <span className="text-[10px] uppercase tracking-widest font-bold">ΔΕΙΤΕ ΤΟ SITE</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
