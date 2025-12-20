@@ -1,3 +1,4 @@
+
 export interface Service {
   id: string;
   title: string;
@@ -45,6 +46,27 @@ export interface LegacyData {
   events: TimelineEvent[];
 }
 
+export interface PortfolioItem {
+  title: string;
+  category: string;
+  url: string;
+  image: string;
+}
+
+export interface PhilosophyItem {
+  title: string;
+  desc: string;
+}
+
+export interface DigitalData {
+  title: string;
+  subtitle: string;
+  description: string;
+  narrative: string;
+  philosophy: PhilosophyItem[];
+  projects: PortfolioItem[];
+}
+
 export interface AppData {
   company: string;
   tagline: string;
@@ -53,4 +75,5 @@ export interface AppData {
   stats: StatItem[];
   services: Service[];
   locations: Locations;
+  digital: DigitalData;
 }

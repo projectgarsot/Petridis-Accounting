@@ -13,6 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentThemeColor }) => {
   const menuItems = [
     { id: 'history', label: 'ΙΣΤΟΡΙΑ' },
     { id: 'services', label: 'ΥΠΗΡΕΣΙΕΣ' },
+    { id: 'digital', label: 'DIGITAL' },
     { id: 'locations', label: 'ΓΡΑΦΕΙΑ' },
     { id: 'contact', label: 'ΕΠΙΚΟΙΝΩΝΙΑ' }
   ];
@@ -55,7 +56,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentThemeColor }) => {
               </a>
             ))}
             
-            {/* CTA Button */}
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

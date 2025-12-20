@@ -8,6 +8,7 @@ import { LocationToggle } from './components/LocationToggle';
 import { Timeline } from './components/Timeline';
 import { Stats } from './components/Stats';
 import { ContactSection } from './components/ContactSection';
+import { WebDesignSection } from './components/WebDesignSection';
 import { DATA } from './constants';
 
 export default function App() {
@@ -25,7 +26,6 @@ export default function App() {
   });
 
   // Interpolate colors: Aegean Blue -> Olive Green
-  // Used for accents and border colors
   const primaryColor = useTransform(
     smoothScroll,
     [0, 0.6],
@@ -53,7 +53,6 @@ export default function App() {
         {/* 1. HERO */}
         <section className="relative min-h-screen w-full flex items-center justify-center px-6 py-24 md:py-0">
           <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
             <div className="text-left z-10 order-1 lg:order-1">
                 <motion.h1 
                   style={{ color: textColor }}
@@ -90,30 +89,20 @@ export default function App() {
                 </motion.div>
             </div>
             
-            {/* Visual (Right Side) - Statue / Arch */}
             <motion.div 
                initial={{ opacity: 0, scale: 0.95, y: 20 }}
                animate={{ opacity: 1, scale: 1, y: 0 }}
                transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                className="flex relative h-[500px] lg:h-[700px] w-full justify-center items-end order-2 lg:order-2 mt-12 lg:mt-0"
             >
-                {/* Decorative Glow Behind Statue */}
                 <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-gold/20 rounded-full blur-[60px] lg:blur-[100px] pointer-events-none"></div>
-
-                {/* Arch Container */}
                 <div className="relative w-full max-w-[320px] lg:max-w-[460px] h-[480px] lg:h-[680px] rounded-t-full lg:rounded-t-[230px] overflow-hidden border border-white/10 shadow-2xl shadow-black/30 backdrop-blur-sm z-10 group">
-                    
-                    {/* Statue Image - ATHENA */}
                     <img 
-                      src="images/athena.png"
+                      src="/images/athena.png"
                       alt="Statue of Athena"
                       className="w-full h-full object-cover object-top opacity-100 scale-105"
                     />
-                    
-                    {/* Gradient Overlay to blend bottom into AEGEAN theme */}
                     <div className="absolute inset-0 bg-gradient-to-t from-aegean via-transparent to-transparent pointer-events-none opacity-50"></div>
-                    
-                    {/* Subtle Inner Highlight */}
                     <div className="absolute inset-0 rounded-t-full lg:rounded-t-[230px] border-t border-white/20 pointer-events-none"></div>
                 </div>
             </motion.div>
@@ -150,7 +139,7 @@ export default function App() {
            <Timeline />
         </section>
 
-        {/* 3. STATS (Why Choose Us) */}
+        {/* 3. STATS */}
         <section className="w-full bg-white/5 backdrop-blur-sm border-y border-white/10 py-20">
             <Stats />
         </section>
@@ -164,7 +153,12 @@ export default function App() {
            <ServicesGrid />
         </section>
 
-        {/* 5. LOCATIONS */}
+        {/* 5. DIGITAL TRANSFORMATION (NEW SECTION) */}
+        <section id="digital" className="w-full py-24 md:py-32 bg-white/[0.02]">
+            <WebDesignSection />
+        </section>
+
+        {/* 6. LOCATIONS */}
         <section id="locations" className="w-full min-h-screen flex flex-col items-center justify-center relative px-6 py-24">
           <div className="text-center mb-16 z-10">
             <h2 className="font-serif text-4xl md:text-5xl text-marble mb-6">Τα Γραφεία Μας</h2>
@@ -176,7 +170,7 @@ export default function App() {
           <LocationToggle />
         </section>
 
-        {/* 6. CONTACT */}
+        {/* 7. CONTACT */}
         <section id="contact" className="w-full py-24 md:py-32 px-6">
              <div className="text-center mb-16">
                  <h2 className="font-serif text-4xl md:text-5xl text-marble mb-4">Επικοινωνία</h2>
@@ -197,6 +191,7 @@ export default function App() {
                     <div className="flex flex-col gap-3">
                          <a href="#history" className="text-white/70 hover:text-gold text-sm transition-colors">Η Ιστορία μας</a>
                          <a href="#services" className="text-white/70 hover:text-gold text-sm transition-colors">Υπηρεσίες</a>
+                         <a href="#digital" className="text-white/70 hover:text-gold text-sm transition-colors">Digital</a>
                          <a href="#locations" className="text-white/70 hover:text-gold text-sm transition-colors">Γραφεία</a>
                          <a href="#contact" className="text-white/70 hover:text-gold text-sm transition-colors">Επικοινωνία</a>
                     </div>

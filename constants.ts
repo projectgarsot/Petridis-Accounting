@@ -82,6 +82,70 @@ export const DATA: AppData = {
       "theme": "gold"
     }
   ],
+  "digital": {
+    "title": "Digital Transformation",
+    "subtitle": "ΣΤΡΑΤΗΓΙΚΗ ΨΗΦΙΑΚΗ ΠΑΡΟΥΣΙΑ",
+    "description": "Στην εταιρεία Πετρίδης & Συνεργάτες, γνωρίζουμε ότι μια υγιής επιχείρηση βασίζεται σε δύο πυλώνες: μια ακλόνητη οικονομική βάση και μια ισχυρή παρουσία στην αγορά. Ενώ εμείς διασφαλίζουμε την απόλυτη ακρίβεια των βιβλίων σας, το ψηφιακό μας τμήμα εξασφαλίζει την ορατότητα και την αξιοπιστία που αξίζει η επιχείρησή σας.",
+    "narrative": "Δεν κατασκευάζουμε απλώς ιστοσελίδες. Δημιουργούμε ψηφιακά περιουσιακά στοιχεία που ευθυγραμμίζονται με τους οικονομικούς σας στόχους. Κατανοούμε την επιχείρησή σας από τον ισολογισμό μέχρι την αρχική σελίδα, προσφέροντας μια μοναδικά ολοκληρωμένη προσέγγιση στην ανάπτυξη.",
+    "philosophy": [
+      {
+        "title": "Στρατηγική Ευθυγράμμιση",
+        "desc": "Σχεδιάζουμε την παρουσία σας με βαθιά κατανόηση του επιχειρηματικού σας μοντέλου, των ταμειακών ροών και των στόχων ανάπτυξης. Κάθε ψηφιακή επένδυση αποκτά σαφή σκοπό."
+      },
+      {
+        "title": "Εξειδίκευση στον Κλάδο",
+        "desc": "Εστιάζουμε στους τομείς που κινούν την τοπική οικονομία—αγροτική παραγωγή, logistics, τρόφιμα και λιανικό εμπόριο. Γνωρίζουμε την αγορά και τους πελάτες σας."
+      },
+      {
+        "title": "Ένας Έμπιστος Συνεργάτης",
+        "desc": "Απλοποιήστε τις λειτουργίες σας συνεργαζόμενοι με μια ενιαία ομάδα που αντιλαμβάνεται τόσο τις οικονομικές όσο και τις ψηφιακές σας ανάγκες."
+      }
+    ],
+    "projects": [
+      {
+        "title": "Mudd Lab",
+        "category": "Creative Agency",
+        "url": "https://muddlab.gr",
+        "image": "images/muddlab.jpg"
+      },
+      {
+        "title": "Tagkalakis Agri Systems",
+        "category": "Agricultural Engineering",
+        "url": "https://tagkalakisagrisystems.gr",
+        "image": "images/tagkalakis.jpg"
+      },
+      {
+        "title": "Stella Mare Fisheries",
+        "category": "Food Industry",
+        "url": "https://stellamarefisheries.gr",
+        "image": "images/stellamare.jpg"
+      },
+      {
+        "title": "Filiatra Super Market",
+        "category": "Retail & Commerce",
+        "url": "https://filiatrasupermarket.gr",
+        "image": "images/supermarket.jpg"
+      },
+      {
+        "title": "Lot Cold Storage",
+        "category": "Logistics & Supply Chain",
+        "url": "https://lotcoldstorage.gr",
+        "image": "images/lot.jpg"
+      },
+      {
+        "title": "Psy Logistics",
+        "category": "Transport & Warehousing",
+        "url": "https://psylogistics.gr",
+        "image": "images/psy.jpg"
+      },
+      {
+        "title": "Messinia Olive Mill",
+        "category": "Agriculture & Production",
+        "url": "https://messiniaolivemill.gr",
+        "image": "images/messinias.jpg"
+      }
+    ]
+  },
   "locations": {
     "athens": {
       "label": "Κεντρικά Αθηνών",

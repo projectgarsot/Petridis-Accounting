@@ -1,29 +1,8 @@
+
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Color, Vector2 } from 'three';
 import { MotionValue } from 'framer-motion';
-
-// Augment JSX namespace to recognize React Three Fiber elements
-// We augment both global JSX and React.JSX to cover different TypeScript/React version configurations
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      mesh: any;
-      planeGeometry: any;
-      shaderMaterial: any;
-    }
-  }
-}
-
-declare module 'react' {
-  namespace JSX {
-    interface IntrinsicElements {
-      mesh: any;
-      planeGeometry: any;
-      shaderMaterial: any;
-    }
-  }
-}
 
 // Fragment Shader: Smooth liquid noise
 const fragmentShader = `
@@ -136,6 +115,7 @@ const ShaderPlane: React.FC<ShaderPlaneProps> = ({ scrollProgress }) => {
   });
 
   return (
+    // Standard Three.js tags are typically recognized by @react-three/fiber environments if types are present
     <mesh ref={mesh} scale={[10, 10, 1]}>
       <planeGeometry args={[2, 2]} />
       <shaderMaterial
